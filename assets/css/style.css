@@ -1,0 +1,389 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #36393f;
+    color: #dcddde;
+}
+
+/* Auth pages */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #36393f;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+}
+
+.auth-box {
+    background-color: #202225;
+    padding: 32px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.auth-box h2 {
+    color: #fff;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b9bbbe;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #40444b;
+    border: 1px solid #202225;
+    border-radius: 3px;
+    color: #dcddde;
+    font-size: 16px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #5865f2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #4752c4;
+}
+
+.auth-switch {
+    margin-top: 20px;
+    text-align: center;
+    color: #72767d;
+}
+
+.auth-switch a {
+    color: #00b0f4;
+    text-decoration: none;
+}
+
+/* Dashboard layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 72px 240px 1fr 240px;
+    height: 100vh;
+}
+
+/* Server list */
+.server-list {
+    background-color: #202225;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.server-item {
+    width: 48px;
+    height: 48px;
+    background-color: #36393f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.server-item:hover {
+    border-radius: 16px;
+    background-color: #5865f2;
+}
+
+.server-item.active {
+    border-radius: 16px;
+    background-color: #5865f2;
+}
+
+.server-icon {
+    color: #dcddde;
+    text-decoration: none;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Channel list */
+.channel-list {
+    background-color: #2f3136;
+    padding: 16px;
+}
+
+.server-header {
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.server-header h2 {
+    color: #fff;
+    font-size: 16px;
+}
+
+.channel-item {
+    margin-bottom: 2px;
+}
+
+.channel-link {
+    display: block;
+    padding: 6px 8px;
+    color: #8e9297;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.channel-link:hover {
+    background-color: #36393f;
+    color: #dcddde;
+}
+
+.channel-link.active {
+    background-color: #36393f;
+    color: #fff;
+}
+
+/* Chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #36393f;
+}
+
+.chat-header {
+    padding: 16px;
+    border-bottom: 1px solid #202225;
+}
+
+.chat-header h3 {
+    color: #fff;
+    font-size: 16px;
+}
+
+.messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 16px;
+}
+
+.message-header {
+    margin-bottom: 4px;
+}
+
+.message-author {
+    color: #fff;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.message-time {
+    color: #72767d;
+    font-size: 12px;
+}
+
+.message-content {
+    color: #dcddde;
+    line-height: 1.4;
+}
+
+.message-input {
+    padding: 20px;
+    background-color: #40444b;
+}
+
+#message-form {
+    display: flex;
+    gap: 16px;
+}
+
+#message {
+    flex: 1;
+    padding: 11px;
+    background-color: #40444b;
+    border: none;
+    border-radius: 8px;
+    color: #dcddde;
+    font-size: 16px;
+}
+
+#message-form button {
+    padding: 0 16px;
+    background-color: #5865f2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Members list */
+.members-list {
+    background-color: #2f3136;
+    padding: 16px;
+}
+
+.members-header {
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.members-header h3 {
+    color: #8e9297;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.members-section {
+    margin-bottom: 16px;
+}
+
+.members-section h4 {
+    color: #8e9297;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 8px;
+    margin-bottom: 8px;
+}
+
+.member-item {
+    padding: 6px 8px;
+    color: #8e9297;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+}
+
+.member-item:hover {
+    background-color: #36393f;
+}
+
+.member-status {
+    width: 10px;
+    height: 10px;
+    background-color: #43b581;
+    border-radius: 50%;
+}
+
+.member-status.offline {
+    background-color: #72767d;
+}
+
+.member-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #36393f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dcddde;
+    font-weight: 500;
+}
+
+.member-role {
+    font-size: 12px;
+    color: #72767d;
+    margin-left: 4px;
+}
+
+/* Server creation modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #36393f;
+    padding: 24px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 440px;
+}
+
+.modal-header {
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.modal-footer button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-footer .btn-cancel {
+    background-color: transparent;
+    color: #fff;
+}
+
+.modal-footer .btn-create {
+    background-color: #5865f2;
+    color: #fff;
+}
+
+.modal-footer .btn-create:hover {
+    background-color: #4752c4;
+} 
